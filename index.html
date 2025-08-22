@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Today's Weather</title>
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/weather.css" />
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/axios.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=5b1667d796898f390eff225f998bf203"
+    ></script>
+    <script src="./js/weather.js"></script>
+  </head>
+  <body>
+    <!-- .conainers>.title-container>h1.title-wrapper^.main-container>.info-wrapper>.title-wrap+.content-wrap^.map-wrapper>.title-wrap+.content-wrap -->
+    <div class="containers">
+      <div class="title-container">
+        <h1 class="title-wrapper">
+          <img src="./img/sun.png" alt="로고아이콘" class="sun-icon" />
+          Today's Weather
+        </h1>
+      </div>
+      <div class="main-container">
+        <div class="wrapper info-wrapper">
+          <div class="title-wrap">현재 날씨</div>
+          <div class="content-wrap">
+            <div class="icon-wp">
+              <img src="" alt="날씨아이콘" class="weather-icon" />
+            </div>
+            <ul class="temp-wp">
+              <li class="temp"><span class="main-temp"></span>℃</li>
+              <li class="temp">
+                (<span class="feels-title">체감온도: </span
+                ><span class="feels-temp"></span>℃)
+              </li>
+            </ul>
+            <ul class="info-wp">
+              <li class="info">
+                <div class="title">최고/최저</div>
+                <div class="content">
+                  <span class="max-temp"></span>℃
+                  <span> / </span>
+                  <span class="min-temp"></span>℃
+                </div>
+              </li>
+              <li class="info">
+                <div class="title">습도</div>
+                <div class="content"><span class="humedity"></span>%</div>
+              </li>
+              <li class="info">
+                <div class="title">날씨</div>
+                <div class="content">
+                  <span class="description"></span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="wrapper map-wrapper">
+          <div class="title-wrap">전국 날씨</div>
+          <div class="content-wrap" id="map"></div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="map-overlay-wrapper">
+      <div class="inner-wrap">
+        <div class="icon-wp">
+          <img
+            src="https://openweathermap.org/img/wn/02d.png"
+            alt="지도날씨아이콘"
+            class="map-icon"
+          />
+        </div>
+        <div class="temp-wp">
+          <span class="city-name">서울</span>
+          <span class="city-temp">32</span>℃
+        </div>
+      </div>
+    </div> -->
+  </body>
+</html>

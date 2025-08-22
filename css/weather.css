@@ -1,0 +1,119 @@
+.containers {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.containers > .title-container {
+  padding: 1em 0 0.5em 0;
+}
+.containers > .main-container {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid var(--text-c);
+  padding: 1.5em 0;
+}
+
+/* 타이틀바 */
+.title-container .title-wrapper {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+}
+.title-container .sun-icon {
+  width: 1.5em;
+  margin-right: 0.5em;
+}
+
+/* 본문 */
+.main-container > .wrapper {
+  width: 50%;
+  padding: 0 1.5em;
+}
+.main-container > .wrapper.map-wrapper {
+  /* min-width: 550px; */
+  flex-shrink: 0;
+}
+.main-container > .wrapper > .title-wrap {
+  font-size: 1.5em;
+  padding: 0.5em 0;
+}
+.main-container > .info-wrapper > .content-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* .main-container > .info-wrapper */
+.info-wrapper > .content-wrap > .icon-wp {
+  width: 50%;
+  text-align: center;
+}
+.info-wrapper > .content-wrap > .temp-wp {
+  width: 50%;
+  margin-bottom: 2em;
+}
+.info-wrapper > .content-wrap > .temp-wp .main-temp {
+  font-size: 2.5em;
+}
+.info-wrapper > .content-wrap > .temp-wp .main-temp {
+  font-size: 2.5em;
+}
+.info-wrapper > .content-wrap > .temp-wp .feels-title {
+  color: var(--text-a);
+}
+.info-wrapper > .content-wrap > .temp-wp .feels-temp {
+  font-size: 1.5em;
+}
+.info-wrapper > .content-wrap > .info-wp {
+  width: 100%;
+}
+.info-wrapper > .content-wrap > .info-wp > .info {
+  width: 100%;
+  display: flex;
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--text-e);
+}
+.info-wrapper > .content-wrap > .info-wp > .info > .title {
+  min-width: 120px;
+}
+
+#map {
+  width: 100%;
+  height: 600px;
+}
+.map-overlay-wrapper {
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid var(--text-e);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translate(-8px, -136%);
+}
+.map-overlay-wrapper.seoul {
+  transform: translate(-60%, -136%);
+}
+.map-overlay-wrapper.sokcho {
+  transform: translate(-8px, -70%);
+}
+.map-overlay-wrapper.dokdo {
+  transform: translate(-96%, -136%);
+}
+.map-overlay-wrapper > .inner-wrap {
+  display: flex;
+  align-items: center;
+}
+.map-overlay-wrapper > .inner-wrap > .icon-wp {
+}
+.map-overlay-wrapper > .inner-wrap > .temp-wp {
+  padding-right: 0.5em;
+}
+.map-overlay-wrapper > .inner-wrap > .temp-wp > .city-name {
+  color: var(--text-9);
+}
+.map-overlay-wrapper > .inner-wrap > .temp-wp > .city-temp {
+  color: var(--text-6);
+}
+
+/* 반응형 */
+@media screen and (max-width: 900px) {
+  .main-container > .wrapper {
+    width: 100%;
+  }
+}

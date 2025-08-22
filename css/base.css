@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+/* 변수 */
+:root {
+  --text-3: #333;
+  --text-5: #555;
+  --text-7: #777;
+  --text-9: #999;
+  --text-a: #aaa;
+  --text-b: #bbb;
+  --text-c: #ccc;
+  --text-d: #ddd;
+  --text-e: #eee;
+  --text-dark: #111;
+  --text-dark-875: rgba(0, 0, 0, 0.875);
+  --text-dark-75: rgba(0, 0, 0, 0.75);
+  --text-dark-625: rgba(0, 0, 0, 0.625);
+  --text-dark-5: rgba(0, 0, 0, 0.5);
+  --text-dark-25: rgba(0, 0, 0, 0.25);
+  --text-light: #f8f8f8;
+  --text-light-875: rgba(255, 255, 255, 0.875);
+  --text-light-75: rgba(255, 255, 255, 0.75);
+  --text-light-625: rgba(255, 255, 255, 0.625);
+  --text-light-5: rgba(255, 255, 255, 0.625);
+  --text-gray: #999;
+
+  --bg-active: #ff5100;
+}
+
+:root[data-darktheme="true"] {
+  --text-dark: #f8f8f8;
+  --text-light: #111;
+}
+
+/* 전체 */
+* {
+  box-sizing: border-box;
+}
+
+/* 다음 참조 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button {
+  margin: 0;
+  padding: 0;
+}
+fieldset,
+img {
+  border: 0 none;
+  vertical-align: middle;
+}
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+input,
+select,
+textarea,
+button {
+  vertical-align: middle;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+html,
+body {
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:active,
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  background-color: transparent;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-weight: inherit;
+}
+
+/* 사용자 정의 */
+input[type="text"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+  padding: 0.5em 0.75em;
+  border: 1px solid var(--text-c);
+  color: var(--text-5);
+  border-radius: 0.25em;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  border: 1px solid var(--text-7);
+  outline: none;
+}
+select {
+  padding: 0.5em 0.75em 0.5em 0.25em;
+}
+textarea {
+  font-family: inherit;
+}
+table, th, td{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* + : sibling 연산자 */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 0.25em;
+  cursor: pointer;
+}
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  margin-right: 1em;
+  cursor: pointer;
+}
